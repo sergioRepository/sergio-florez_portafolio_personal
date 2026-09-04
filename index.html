@@ -26,15 +26,23 @@
        ========================================== -->
   <header class="site-header" id="header">
     <div class="nav-container">
-      <a href="#inicio" class="brand-logo" aria-label="Sergio Daniel Florez Lopez - Inicio">
-        <span class="brand-badge">[SDFL]</span>
-        <span class="brand-name">SERGIO FLOREZ</span>
+      <a href="#inicio" class="brand-logo" aria-label="Sergio Daniel Florez - Inicio">
+        <span class="brand-badge">[SDF]</span>
+        <span class="brand-name">SERGIO DANIEL FLOREZ</span>
       </a>
+
+      <!-- Estado técnico en tiempo real -->
+      <div class="system-status" aria-label="Estado de disponibilidad laboral">
+        <span class="status-indicator"></span>
+        <span class="status-text">DISPONIBLE // BUCARAMANGA, CO</span>
+      </div>
+
       <!-- Menú de Navegación de Escritorio -->
       <nav class="main-nav" id="desktop-nav" aria-label="Navegación principal">
         <ul class="nav-links">
           <li><a href="#inicio" class="nav-link active">Inicio</a></li>
           <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
           <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
           <li><a href="#seguridad" class="nav-link">Seguridad</a></li>
           <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
@@ -42,10 +50,13 @@
         </ul>
       </nav>
 
-      <!-- Botón de Alternancia de Tema Claro/Oscuro -->
+      <!-- Botón de Alternancia de Tema Claro/Oscuro y Hamburguesa Móvil -->
       <div class="nav-actions">
+        <button id="theme-toggle" class="btn-theme-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+          <span class="theme-icon-sun" aria-hidden="true">☀️</span>
+          <span class="theme-icon-moon" aria-hidden="true">🌙</span>
+        </button>
 
-        <!-- Botón Hamburguesa Móvil Accesible -->
         <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú de navegación">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -63,13 +74,14 @@
       <ul class="mobile-nav-links">
         <li><a href="#inicio" class="mobile-link">00. Inicio</a></li>
         <li><a href="#sobre-mi" class="mobile-link">01. Sobre mí</a></li>
-        <li><a href="#proyectos" class="mobile-link">02. Proyectos</a></li>
-        <li><a href="#seguridad" class="mobile-link">03. Metodología de Seguridad</a></li>
-        <li><a href="#habilidades" class="mobile-link">04. Stack Técnico</a></li>
-        <li><a href="#contacto" class="mobile-link">05. Canal de Contacto</a></li>
+        <li><a href="#experiencia" class="mobile-link">02. Experiencia & Educación</a></li>
+        <li><a href="#proyectos" class="mobile-link">03. Proyectos</a></li>
+        <li><a href="#seguridad" class="mobile-link">04. Metodología de Seguridad</a></li>
+        <li><a href="#habilidades" class="mobile-link">05. Stack Técnico</a></li>
+        <li><a href="#contacto" class="mobile-link">06. Canal de Contacto</a></li>
       </ul>
       <div class="mobile-nav-footer">
-        <p class="mobile-status-tag">STATUS: ONLINE / DISPONIBLE</p>
+        <p class="mobile-status-tag">STATUS: ONLINE // BUCARAMANGA (UTC-5)</p>
       </div>
     </div>
 
@@ -91,9 +103,9 @@
         <!-- Contenido textual del Hero -->
         <div class="hero-content">
           <div class="hero-tags">
-            <!-- REEMPLAZA O AJUSTA TU ROL PRINCIPAL SI LO DESEAS -->
-            <span class="tag tag--primary">BACKEND DEVELOPER</span>
-            <span class="tag tag--accent">SECURITY ANALYST</span>
+            <span class="tag tag--primary">BACKEND DEVELOPER JUNIOR</span>
+            <span class="tag tag--accent">TECNÓLOGO EN SISTEMAS (UTS)</span>
+            <span class="tag tag--green">CIBERSEGURIDAD & TIC</span>
           </div>
 
           <h1 id="hero-title" class="hero-heading">
@@ -101,10 +113,9 @@
           </h1>
 
           <p class="hero-lead">
-            <!-- REEMPLAZA O PERSONALIZA TU DESCRIPCIÓN DE PRESENTACIÓN -->
-            Desarrollo arquitecturas backend fiables, estructuradas y protegidas desde el diseño. 
-            Combino ingeniería de APIs de alto rendimiento con análisis metódico de amenazas, 
-            auditorías rigurosas y automatización de procesos críticos de infraestructura.
+            Tecnólogo en Desarrollo de Sistemas Informáticos (UTS) y estudiante de Ingeniería de Sistemas. 
+            Especializado en desarrollo backend con <strong>Java (Spring Boot)</strong>, <strong>Python</strong> y bases de datos <strong>MySQL</strong>, 
+            con experiencia en gestión de infraestructura TIC, implementación de VPNs seguras, automatización con n8n y análisis de ciberseguridad.
           </p>
 
           <div class="hero-actions">
@@ -112,18 +123,24 @@
               <span>Ver proyectos</span>
               <svg class="icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
             </a>
-            <!-- REEMPLAZA CON TU ENLACE REAL DE GITHUB -->
-            <a href="https://github.com/sergioflorez" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+            <!-- REPOSITORIO GITHUB -->
+            <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
               <svg class="icon-brand" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               <span>GitHub</span>
+            </a>
+            <!-- PERFIL REAL DE LINKEDIN -->
+            <a href="https://www.linkedin.com/in/sergio-florez-129401329/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
+              <svg class="icon-brand" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>LinkedIn</span>
             </a>
           </div>
 
           <!-- Mini sello técnico de credenciales -->
           <div class="hero-stamp-bar">
-            <span class="micro-stamp">SYSTEMS / SECURITY / CODE</span>
-            <span class="micro-stamp">DEFENSIVE_FIRST</span>
-            <span class="micro-stamp">STANDARDS: OWASP_ASVS</span>
+            <span class="micro-stamp">JAVA / SPRING BOOT</span>
+            <span class="micro-stamp">PYTHON / MYSQL</span>
+            <span class="micro-stamp">VPN & CIBERSEGURIDAD</span>
+            <span class="micro-stamp">BUCARAMANGA (UTS)</span>
           </div>
         </div>
 
@@ -145,10 +162,10 @@
               </div>
 
               <div class="card-image-container">
-                <!-- RUTA DE LA IMAGEN: assets/sergio-hero.png -->
+                <!-- RUTA DE LA IMAGEN: assets/sergio-hero.jpg -->
                 <img 
                   src="assets/sergio-hero.jpg" 
-                  alt="Sergio Daniel Florez Lopez sentado concentrado programando en su ordenador portátil" 
+                  alt="Sergio Daniel Florez sentado concentrado programando en su ordenador portátil" 
                   class="hero-avatar"
                   loading="eager"
                   width="100%"
@@ -158,16 +175,16 @@
 
               <div class="card-footer-bar">
                 <div class="metric-micro">
-                  <span class="metric-label">FOCUS:</span>
-                  <span class="metric-value">CORE BACKEND</span>
+                  <span class="metric-label">STACK:</span>
+                  <span class="metric-value">JAVA / SPRING</span>
                 </div>
                 <div class="metric-micro">
-                  <span class="metric-label">AUDIT:</span>
-                  <span class="metric-value">0 CRITICAL</span>
+                  <span class="metric-label">INFRA:</span>
+                  <span class="metric-value">VPN / MIKROTIK</span>
                 </div>
                 <div class="metric-micro">
-                  <span class="metric-label">INTEGRITY:</span>
-                  <span class="metric-value">100%</span>
+                  <span class="metric-label">DB:</span>
+                  <span class="metric-value">MYSQL / SQL</span>
                 </div>
               </div>
             </div>
@@ -194,37 +211,36 @@
         <div class="about-grid">
           <!-- Tarjeta de Bio Principal -->
           <article class="card about-bio-card">
-            <h3 class="card-title-lg">Ingeniería respaldada por disciplina y evidencia</h3>
+            <h3 class="card-title-lg">Ingeniería respaldada por disciplina, código y soporte TIC</h3>
             <div class="about-text">
               <p>
-                <!-- PERSONALIZA TU TRAYECTORIA Y ENFOQUE -->
-                Soy <strong>Sergio Daniel Florez Lopez</strong>, profesional orientado al desarrollo de software backend y al análisis de ciberseguridad. Concibo la seguridad no como una capa añadida al final del ciclo de vida, sino como un principio fundamental desde la primera línea de código y el diseño de la arquitectura de datos.
+                Soy <strong>Sergio Daniel Florez</strong>, Tecnólogo en Desarrollo de Sistemas Informáticos egresado de las <strong>Unidades Tecnológicas de Santander (UTS)</strong> y actual estudiante de <strong>Ingeniería de Sistemas</strong> en la misma institución en Bucaramanga.
               </p>
               <p>
-                Me alejo de soluciones superficiales o mitos de ficción informática. Mi labor se fundamenta en principios sólidos: modelado metódico de amenazas, desarrollo de APIs RESTful resilientes, validación estricta de esquemas, reducción de superficie de ataque y automatización de controles técnicos reproducibles.
+                Mi perfil combina el <strong>desarrollo backend</strong> con tecnologías como <strong>Java (Spring Boot)</strong>, <strong>Python</strong> y <strong>MySQL</strong>, con una sólida experiencia práctica en <strong>ciberseguridad defensiva</strong>, soporte TIC y automatización de procesos operativos con herramientas modernas como <strong>n8n</strong>.
               </p>
               <p>
-                Cada sistema que construyo está pensado para operar bajo carga continua, resistir vectores de fallo o intrusión y mantenerse completamente documentado para auditorías y evolución en equipo.
+                En mi trayectoria laboral en <strong>LA MUELA S.A.S</strong>, implementé soluciones críticas como redes privadas virtuales (VPN) para trabajo remoto seguro, despliegue de antivirus corporativo, mapeo de cableado estructurado y diseño de programas de concientización en seguridad digital para colaboradores. Concibo la tecnología como un medio para optimizar infraestructura y construir sistemas resistentes y eficientes.
               </p>
             </div>
 
             <!-- Ficha técnica rápida -->
             <div class="bio-meta-grid">
               <div class="bio-meta-item">
-                <span class="meta-title">ORIENTACIÓN:</span>
-                <span class="meta-desc">Backend Architecture & Defensive Security</span>
+                <span class="meta-title">TÍTULO PROFESIONAL:</span>
+                <span class="meta-desc">Tecnólogo en Desarrollo de Sistemas Informáticos (UTS)</span>
               </div>
               <div class="bio-meta-item">
-                <span class="meta-title">FILOSOFÍA:</span>
-                <span class="meta-desc">Security by Design, Zero Implicit Trust</span>
+                <span class="meta-title">FORMACIÓN ACTUAL:</span>
+                <span class="meta-desc">Ingeniería de Sistemas (UTS, 2025 - En curso)</span>
               </div>
               <div class="bio-meta-item">
-                <span class="meta-title">ESTÁNDARES:</span>
-                <span class="meta-desc">OWASP Top 10, REST RFCs, NIST Guidelines</span>
+                <span class="meta-title">STACK PRINCIPAL:</span>
+                <span class="meta-desc">Java, Spring Boot, Python, MySQL, n8n</span>
               </div>
               <div class="bio-meta-item">
-                <span class="meta-title">DOCUMENTACIÓN:</span>
-                <span class="meta-desc">OpenAPI/Swagger, ADRs, Post-Mortems</span>
+                <span class="meta-title">UBICACIÓN & ZONA:</span>
+                <span class="meta-desc">Bucaramanga, Santander, Colombia (UTC-5)</span>
               </div>
             </div>
           </article>
@@ -234,43 +250,167 @@
             <div class="card pillar-card">
               <div class="pillar-header">
                 <span class="pillar-badge">[01]</span>
-                <h4 class="pillar-title">Arquitectura Backend</h4>
+                <h4 class="pillar-title">Desarrollo Backend</h4>
               </div>
               <p class="pillar-desc">
-                Diseño e implementación de servicios REST estructurados, modelado relacional consistente, manejo de concurrencia y control estricto de accesos basado en roles (RBAC).
+                Diseño de APIs RESTful con Java (Spring Boot) y Python. Modelado de bases de datos relacionales con MySQL, persistencia con Spring Data JPA y principios de código limpio.
               </p>
             </div>
 
             <div class="card pillar-card">
               <div class="pillar-header">
                 <span class="pillar-badge">[02]</span>
-                <h4 class="pillar-title">Seguridad Defensiva</h4>
+                <h4 class="pillar-title">Ciberseguridad Defensiva</h4>
               </div>
               <p class="pillar-desc">
-                Análisis de vulnerabilidades en código y dependencias, mitigación activa del OWASP Top 10, sanitización profunda de entradas y prevención de fugas de información.
+                Configuración de túneles VPN para acceso remoto seguro, despliegue y actualización de antivirus corporativo, análisis de amenazas y concientización contra ingeniería social.
               </p>
             </div>
 
             <div class="card pillar-card">
               <div class="pillar-header">
                 <span class="pillar-badge">[03]</span>
-                <h4 class="pillar-title">Automatización de Tareas</h4>
+                <h4 class="pillar-title">Automatización & Flujos</h4>
               </div>
               <p class="pillar-desc">
-                Creación de scripts de auditoría, pipelines de CI/CD con controles de seguridad estáticos (SAST) y orquestación de entornos reproducibles con contenedores.
+                Orquestación de tareas repetitivas mediante n8n y scripts en Python. Integración con webhooks, automatización de alertas operativas y gestión de versiones con Git/GitHub.
               </p>
             </div>
 
             <div class="card pillar-card">
               <div class="pillar-header">
                 <span class="pillar-badge">[04]</span>
-                <h4 class="pillar-title">Documentación Rigurosa</h4>
+                <h4 class="pillar-title">Infraestructura TIC & Redes</h4>
               </div>
               <p class="pillar-desc">
-                Especificaciones de API transparentes, registros de decisiones de arquitectura (ADRs), manuales de remediación y protocolos de respuesta claros.
+                Mapeo de cableado estructurado con herramientas especializadas (wire tracer), administración básica MikroTik, mantenimiento de hardware y soporte técnico a usuarios.
               </p>
             </div>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN 2.5: EXPERIENCIA & EDUCACIÓN
+         ========================================== -->
+    <section class="section experience-section" id="experiencia" aria-labelledby="experience-title">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-tag">// 02. TRAYECTORIA_LABORAL_Y_ACADEMICA</span>
+          <h2 id="experience-title" class="section-title">Experiencia & Educación</h2>
+          <p class="section-desc">
+            Práctica profesional en soporte TIC y seguridad corporativa, respaldada por formación universitaria y certificaciones técnicas continuas.
+          </p>
+        </header>
+
+        <div class="experience-education-grid">
+
+          <!-- Columna: Experiencia Laboral -->
+          <div class="exp-column">
+            <h3 class="subsection-title">
+              <span class="title-badge">💼</span> Experiencia Laboral
+            </h3>
+
+            <article class="card experience-card">
+              <div class="exp-header">
+                <div>
+                  <h4 class="exp-role">Auxiliar de Sistemas / Practicante TIC</h4>
+                  <span class="exp-company">LA MUELA S.A.S</span>
+                </div>
+                <div class="exp-meta">
+                  <span class="tag tag--accent">Marzo 2024 - Agosto 2024</span>
+                  <span class="exp-location">📍 Bucaramanga, Santander</span>
+                </div>
+              </div>
+
+              <div class="exp-body">
+                <p class="exp-summary-text">
+                  Responsable de actividades de soporte a infraestructura TIC, aseguramiento de endpoints y optimización de conectividad segura:
+                </p>
+                <ul class="exp-achievements">
+                  <li>
+                    <strong>Implementación de VPN:</strong> Configuración y puesta en marcha de túnel VPN corporativo para garantizar acceso remoto seguro a colaboradores.
+                  </li>
+                  <li>
+                    <strong>Seguridad de Endpoints:</strong> Instalación, configuración y actualización continua de antivirus corporativo en los equipos de la compañía.
+                  </li>
+                  <li>
+                    <strong>Curso de Concientización:</strong> Diseño y ejecución de un programa de formación en ciberseguridad para empleados, previniendo phishing y malware.
+                  </li>
+                  <li>
+                    <strong>Redes & Cableado Estructurado:</strong> Apoyo en el mapeo y organización de cableado estructurado utilizando herramientas de rastreo (wire tracer).
+                  </li>
+                  <li>
+                    <strong>Mitigación de Amenazas:</strong> Revisión permanente de incidentes informáticos y actualización de parches de seguridad de software.
+                  </li>
+                  <li>
+                    <strong>Mantenimiento y Soporte:</strong> Mantenimiento preventivo y correctivo de computadores e impresoras, junto a soporte técnico directo a usuarios.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <!-- Columna: Formación y Certificaciones -->
+          <div class="edu-column">
+            <h3 class="subsection-title">
+              <span class="title-badge">🎓</span> Formación & Certificaciones
+            </h3>
+
+            <!-- Grados Universitarios -->
+            <div class="edu-cards-group">
+              <article class="card edu-card">
+                <div class="edu-badge-tag">EN CURSO // GRADO PROFESIONAL</div>
+                <h4 class="edu-title">Ingeniería de Sistemas</h4>
+                <span class="edu-institution">Unidades Tecnológicas de Santander (UTS)</span>
+                <span class="edu-date">2025 - En curso // Bucaramanga, Santander</span>
+              </article>
+
+              <article class="card edu-card">
+                <div class="edu-badge-tag">TITULADO // TECNOLOGÍA</div>
+                <h4 class="edu-title">Tecnología en Desarrollo de Sistemas Informáticos</h4>
+                <span class="edu-institution">Unidades Tecnológicas de Santander (UTS)</span>
+                <span class="edu-date">2021 - 2025 // Bucaramanga, Santander</span>
+              </article>
+            </div>
+
+            <!-- Certificaciones Técnicas -->
+            <div class="certs-wrapper">
+              <h4 class="certs-group-title">[CERTIFICACIONES_Y_BOOTCAMPS]</h4>
+              <div class="certs-grid">
+                
+                <div class="cert-item card">
+                  <span class="cert-issuer">CISCO NETWORKING ACADEMY</span>
+                  <h5 class="cert-name">Introduction to Cybersecurity</h5>
+                  <span class="cert-date">Agosto 2026</span>
+                </div>
+
+                <div class="cert-item card">
+                  <span class="cert-issuer">HACKERRANK</span>
+                  <h5 class="cert-name">SQL (Basic) Certificate</h5>
+                  <span class="cert-date">Agosto 2026</span>
+                </div>
+
+                <div class="cert-item card">
+                  <span class="cert-issuer">UDEMY</span>
+                  <h5 class="cert-name">Python Hacking: Ciberseguridad y Hacking Ético con Python</h5>
+                  <span class="cert-date">Enero 2026</span>
+                </div>
+
+                <div class="cert-item card">
+                  <span class="cert-issuer">TALENTO TECH</span>
+                  <h5 class="cert-name">Bootcamp de Ciberseguridad Básico</h5>
+                  <span class="cert-date">Agosto 2025 // Bucaramanga</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -283,7 +423,7 @@
       <div class="container">
         
         <header class="section-header">
-          <span class="section-tag">// 02. INGENIERIA_APLICADA</span>
+          <span class="section-tag">// 03. PROYECTOS_DESTACADOS</span>
           <h2 id="projects-title" class="section-title">Proyectos Seleccionados</h2>
           <p class="section-desc">
             Casos prácticos de desarrollo backend y seguridad aplicada, con problemas delimitados, soluciones técnicas y métricas medibles.
@@ -293,21 +433,21 @@
         <div class="projects-grid">
 
           <!-- ==========================================
-               PROYECTO 1: API GATEWAY & AUTH SERVICE
+               PROYECTO 1: API REST CON JAVA & SPRING BOOT
                ========================================== -->
           <article class="card project-card">
             <div class="project-topbar">
               <span class="project-id">PRJ-01</span>
-              <span class="project-type-tag">BACKEND / AUTH</span>
+              <span class="project-type-tag">BACKEND // JAVA & SPRING</span>
             </div>
 
-            <h3 class="project-title">API Gateway Seguro & Servicio de Autenticación Centralizado</h3>
+            <h3 class="project-title">API RESTful con Java, Spring Boot & MySQL</h3>
 
             <!-- Problema -->
             <div class="project-block">
               <h4 class="block-label">PROBLEMA:</h4>
               <p class="block-text">
-                Múltiples servicios backend internos expuestos sin una capa unificada de control de flujo, con riesgo de saturación por abusos de tráfico (DDoS de capa 7) y autenticación tokenizada inconsistente entre endpoints.
+                Necesidad de gestionar entidades de negocio y operaciones transaccionales garantizando consistencia ACID, validación estricta de esquemas de datos y endpoints seguros ante peticiones malformadas.
               </p>
             </div>
 
@@ -315,7 +455,7 @@
             <div class="project-block">
               <h4 class="block-label">SOLUCIÓN TÉCNICA:</h4>
               <p class="block-text">
-                Desarrollo de un Gateway perimetral con middleware de Rate Limiting por IP/Token con almacenamiento en Redis, verificación asimétrica de tokens JWT (RS256), revocación en listas negras y sanitización estricta de payloads entrantes.
+                Desarrollo de una API RESTful modular en Java con Spring Boot utilizando arquitectura por capas (Controller, Service, Repository, DTOs), persistencia relacional con Spring Data JPA sobre MySQL y validación rigurosa de entradas.
               </p>
             </div>
 
@@ -323,12 +463,12 @@
             <div class="project-block">
               <h4 class="block-label">TECNOLOGÍAS:</h4>
               <div class="tech-tags">
-                <span class="tech-pill">Node.js</span>
-                <span class="tech-pill">Redis</span>
-                <span class="tech-pill">PostgreSQL</span>
-                <span class="tech-pill">JWT (RS256)</span>
-                <span class="tech-pill">Docker</span>
-                <span class="tech-pill">Linux</span>
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Spring Data JPA</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">Git</span>
               </div>
             </div>
 
@@ -336,20 +476,18 @@
             <div class="metric-callout">
               <div class="metric-icon" aria-hidden="true">⚡</div>
               <div class="metric-info">
-                <strong class="metric-number">25 endpoints protegidos</strong>
-                <span class="metric-caption">Sobrecarga de latencia < 9ms en pruebas de estrés</span>
+                <strong class="metric-number">Persistencia eficiente & validación estricta</strong>
+                <span class="metric-caption">Operaciones CRUD con consultas indexadas y latencia sub-20ms</span>
               </div>
             </div>
 
             <!-- BOTONES SOLICITADOS: [ Código Git ] y [ Ver página ] -->
             <div class="project-actions">
-              <!-- REEMPLAZA EL ENLACE DE GITHUB CON TU REPOSITORIO REAL -->
-              <a href="https://github.com/sergioflorez/api-gateway-auth-service" target="_blank" rel="noopener noreferrer" class="btn btn--project-git">
+              <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--project-git">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <span>Código Git</span>
               </a>
-              <!-- REEMPLAZA CON EL ENLACE A TU DEMO, DESPLIEGUE O DOCUMENTACIÓN -->
-              <a href="https://github.com/sergioflorez" target="_blank" rel="noopener noreferrer" class="btn btn--project-demo">
+              <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--project-demo">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>Ver página</span>
               </a>
@@ -357,21 +495,21 @@
           </article>
 
           <!-- ==========================================
-               PROYECTO 2: PIPELINE CI/CD CON HARDENING
+               PROYECTO 2: AUTOMATIZACIÓN CON PYTHON & N8N
                ========================================== -->
           <article class="card project-card">
             <div class="project-topbar">
               <span class="project-id">PRJ-02</span>
-              <span class="project-type-tag">AUTOMATIZACIÓN / DEVSECOPS</span>
+              <span class="project-type-tag">AUTOMATIZACIÓN // PYTHON & N8N</span>
             </div>
 
-            <h3 class="project-title">Pipeline Automatizado de Auditoría & Hardening CI/CD</h3>
+            <h3 class="project-title">Automatización de Flujos de Trabajo con Python & n8n</h3>
 
             <!-- Problema -->
             <div class="project-block">
               <h4 class="block-label">PROBLEMA:</h4>
               <p class="block-text">
-                Fugas involuntarias de credenciales y dependencias desactualizadas con vulnerabilidades críticas (CVEs) detectadas solo tras llegar al servidor de pruebas, generando demoras en entregas.
+                Tareas manuales repetitivas de sincronización de registros, extracción de datos y despacho de alertas críticas que generaban demoras operativas y riesgo de error humano.
               </p>
             </div>
 
@@ -379,7 +517,7 @@
             <div class="project-block">
               <h4 class="block-label">SOLUCIÓN TÉCNICA:</h4>
               <p class="block-text">
-                Diseño de un pipeline automatizado de análisis estático (SAST), detección temprana de secretos (Gitleaks) y escaneo de capas de contenedor Docker (Trivy) con reglas de bloqueo estricto antes de cada merge a ramas principales.
+                Orquestación de workflows en n8n conectados mediante webhooks y scripts en Python para automatizar la captura, procesamiento de payloads JSON y emisión de notificaciones inmediatas ante eventos del sistema.
               </p>
             </div>
 
@@ -388,11 +526,11 @@
               <h4 class="block-label">TECNOLOGÍAS:</h4>
               <div class="tech-tags">
                 <span class="tech-pill">Python</span>
-                <span class="tech-pill">Bash</span>
-                <span class="tech-pill">GitHub Actions</span>
-                <span class="tech-pill">Trivy</span>
-                <span class="tech-pill">Gitleaks</span>
-                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">n8n</span>
+                <span class="tech-pill">Webhooks</span>
+                <span class="tech-pill">REST APIs</span>
+                <span class="tech-pill">JSON</span>
+                <span class="tech-pill">Git</span>
               </div>
             </div>
 
@@ -400,20 +538,18 @@
             <div class="metric-callout">
               <div class="metric-icon" aria-hidden="true">⏱️</div>
               <div class="metric-info">
-                <strong class="metric-number">Automatización de 3 tareas críticas</strong>
-                <span class="metric-caption">Reducción del tiempo de auditoría de 4 horas a 12 minutos</span>
+                <strong class="metric-number">Optimización de procesos a cero demoras</strong>
+                <span class="metric-caption">Automatización integral de flujos manuales con n8n y Python</span>
               </div>
             </div>
 
             <!-- BOTONES SOLICITADOS: [ Código Git ] y [ Ver página ] -->
             <div class="project-actions">
-              <!-- REEMPLAZA EL ENLACE DE GITHUB CON TU REPOSITORIO REAL -->
-              <a href="https://github.com/sergioflorez/security-ci-audit-pipeline" target="_blank" rel="noopener noreferrer" class="btn btn--project-git">
+              <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--project-git">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <span>Código Git</span>
               </a>
-              <!-- REEMPLAZA CON EL ENLACE A TU DEMO, DESPLIEGUE O DOCUMENTACIÓN -->
-              <a href="https://github.com/sergioflorez" target="_blank" rel="noopener noreferrer" class="btn btn--project-demo">
+              <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--project-demo">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>Ver página</span>
               </a>
@@ -421,21 +557,21 @@
           </article>
 
           <!-- ==========================================
-               PROYECTO 3: INGESTIÓN Y ANÁLISIS DE ANOMALÍAS
+               PROYECTO 3: VPN & HARDENING TIC
                ========================================== -->
           <article class="card project-card">
             <div class="project-topbar">
               <span class="project-id">PRJ-03</span>
-              <span class="project-type-tag">TELEMETRÍA / DEFENSE</span>
+              <span class="project-type-tag">SEGURIDAD TIC // VPN & REDES</span>
             </div>
 
-            <h3 class="project-title">Sistema Backend de Ingestión & Detección de Anomalías</h3>
+            <h3 class="project-title">Infraestructura de Acceso Remoto Seguro (VPN) & Hardening TIC</h3>
 
             <!-- Problema -->
             <div class="project-block">
               <h4 class="block-label">PROBLEMA:</h4>
               <p class="block-text">
-                Falta de visibilidad centralizada sobre intentos de fuerza bruta, escaneo de directorios ocultos e inyecciones sobre endpoints REST repartidos en servidores independientes.
+                Vulnerabilidad en la conexión remota de colaboradores a recursos corporativos internos sin canal cifrado y riesgo de propagación de malware en estaciones de trabajo.
               </p>
             </div>
 
@@ -443,7 +579,7 @@
             <div class="project-block">
               <h4 class="block-label">SOLUCIÓN TÉCNICA:</h4>
               <p class="block-text">
-                Construcción de un microservicio de recolección de eventos Syslog y logs HTTP, procesamiento con expresiones formales y reglas heurísticas de correlación temporal, disparando mitigaciones dinámicas en cortafuegos (UFW/iptables).
+                Configuración e implementación de VPN para acceso remoto cifrado, integración con enrutadores MikroTik, despliegue masivo de antivirus corporativo y capacitación a usuarios en prevención de phishing.
               </p>
             </div>
 
@@ -451,12 +587,12 @@
             <div class="project-block">
               <h4 class="block-label">TECNOLOGÍAS:</h4>
               <div class="tech-tags">
-                <span class="tech-pill">Python (FastAPI)</span>
-                <span class="tech-pill">PostgreSQL</span>
-                <span class="tech-pill">Redis</span>
-                <span class="tech-pill">Linux Syslog</span>
-                <span class="tech-pill">Bash</span>
-                <span class="tech-pill">iptables</span>
+                <span class="tech-pill">VPN</span>
+                <span class="tech-pill">MikroTik</span>
+                <span class="tech-pill">Antivirus Corporativo</span>
+                <span class="tech-pill">Wire Tracer</span>
+                <span class="tech-pill">Redes TIC</span>
+                <span class="tech-pill">Security Training</span>
               </div>
             </div>
 
@@ -464,20 +600,18 @@
             <div class="metric-callout">
               <div class="metric-icon" aria-hidden="true">🛡️</div>
               <div class="metric-info">
-                <strong class="metric-number">Reducción del 85% en tiempo de respuesta</strong>
-                <span class="metric-caption">Alertas de patrones maliciosos en < 2.5 segundos</span>
+                <strong class="metric-number">Conexiones 100% cifradas</strong>
+                <span class="metric-caption">Cero incidentes de intrusión y concientización exitosa en la empresa</span>
               </div>
             </div>
 
             <!-- BOTONES SOLICITADOS: [ Código Git ] y [ Ver página ] -->
             <div class="project-actions">
-              <!-- REEMPLAZA EL ENLACE DE GITHUB CON TU REPOSITORIO REAL -->
-              <a href="https://github.com/sergioflorez/log-anomaly-detection-service" target="_blank" rel="noopener noreferrer" class="btn btn--project-git">
+              <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--project-git">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 <span>Código Git</span>
               </a>
-              <!-- REEMPLAZA CON EL ENLACE A TU DEMO, DESPLIEGUE O DOCUMENTACIÓN -->
-              <a href="https://github.com/sergioflorez" target="_blank" rel="noopener noreferrer" class="btn btn--project-demo">
+              <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="btn btn--project-demo">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>Ver página</span>
               </a>
@@ -496,7 +630,7 @@
       <div class="container">
 
         <header class="section-header">
-          <span class="section-tag">// 03. METODOLOGIA_DE_ANALISIS</span>
+          <span class="section-tag">// 04. METODOLOGIA_DE_SEGURIDAD</span>
           <h2 id="security-title" class="section-title">Flujo de Seguridad & Caso de Estudio</h2>
           <p class="section-desc">
             Metodología estructurada de 4 fases para la identificación, contención, corrección y documentación técnica de incidencias.
@@ -513,12 +647,12 @@
                 <h3 class="step-title">OBSERVAR</h3>
               </div>
               <p class="step-summary">
-                Mapeo de superficie de ataque, telemetría y auditoría de peticiones anómalas.
+                Mapeo de superficie de red, endpoints e inspección de tráfico con herramientas técnicas.
               </p>
               <ul class="step-checklist">
-                <li>Auditoría de logs HTTP & Auth</li>
-                <li>Inventario de rutas de API activas</li>
-                <li>Detección de patrones anómalos</li>
+                <li>Inventario de endpoints & equipos</li>
+                <li>Mapeo físico y lógico de red</li>
+                <li>Monitoreo de alertas en antivirus</li>
               </ul>
             </div>
           </div>
@@ -531,12 +665,12 @@
                 <h3 class="step-title">ANALIZAR</h3>
               </div>
               <p class="step-summary">
-                Modelado formal de amenazas, validación de reproducibilidad y evaluación de impacto.
+                Evaluación de riesgos de accesos remotos, canales no cifrados y vectores de ingeniería social.
               </p>
               <ul class="step-checklist">
-                <li>Modelo STRIDE en capas lógicas</li>
-                <li>Pruebas controladas en entorno staging</li>
-                <li>Severidad CVSS v3 estimada</li>
+                <li>Simulación de phishing & malware</li>
+                <li>Evaluación de puntos de conexión</li>
+                <li>Identificación de software vulnerable</li>
               </ul>
             </div>
           </div>
@@ -549,12 +683,12 @@
                 <h3 class="step-title">CORREGIR</h3>
               </div>
               <p class="step-summary">
-                Remediación a nivel de código fuente, refuerzo de validaciones y principio de menor privilegio.
+                Despliegue de VPN cifrada, centralización de antivirus corporativo y hardening de equipos.
               </p>
               <ul class="step-checklist">
-                <li>Parcheo en controladores backend</li>
-                <li>Validación estricta de esquemas</li>
-                <li>Tests unitarios y de regresión</li>
+                <li>Configuración de túneles VPN</li>
+                <li>Actualización de parches en endpoints</li>
+                <li>Políticas de mínimo privilegio</li>
               </ul>
             </div>
           </div>
@@ -567,12 +701,12 @@
                 <h3 class="step-title">DOCUMENTAR</h3>
               </div>
               <p class="step-summary">
-                Elaboración del informe técnico post-mortem y actualización de directivas permanentes.
+                Formación técnica al personal, manuales de conectividad y directivas de seguridad corporativa.
               </p>
               <ul class="step-checklist">
-                <li>Informe de lecciones aprendidas</li>
-                <li>Actualización de reglas en CI/CD</li>
-                <li>Monitoreo preventivo activado</li>
+                <li>Talleres anti-phishing para usuarios</li>
+                <li>Manuales de conexión remota segura</li>
+                <li>Bitácora de incidencias TIC</li>
               </ul>
             </div>
           </div>
@@ -582,40 +716,40 @@
         <article class="card case-study-card">
           <div class="case-study-top">
             <div class="case-badge-group">
-              <span class="tag tag--accent">CASE_STUDY_REF: #SEC-2026-04</span>
-              <span class="tag tag--green">ESTADO: RESUELTO Y AUDITADO</span>
+              <span class="tag tag--accent">CASE_STUDY_REF: #SEC-VPN-LA-MUELA</span>
+              <span class="tag tag--green">ESTADO: DESPLEGADO Y OPERATIVO EN PRODUCCIÓN</span>
             </div>
-            <span class="case-timestamp">ENTORNO: PRODUCCIÓN // BACKEND API</span>
+            <span class="case-timestamp">ENTORNO: INFRAESTRUCTURA HÍBRIDA // LA MUELA S.A.S</span>
           </div>
 
-          <h3 class="case-title">Caso Práctico: Detección y Remediación de Vulnerabilidad IDOR (Insecure Direct Object Reference) en API Multitenant</h3>
+          <h3 class="case-title">Caso Práctico: Despliegue de Red Privada Virtual (VPN) Segura y Fortalecimiento Defensivo contra Phishing</h3>
 
           <div class="case-grid">
             <div class="case-col">
-              <h4 class="case-subtitle">[01. VECTOR IDENTIFICADO]</h4>
+              <h4 class="case-subtitle">[01. DIAGNÓSTICO & VULNERABILIDAD]</h4>
               <p class="case-text">
-                Durante la auditoría de endpoints de facturación, se detectó que el endpoint <code>PUT /api/v1/invoices/:id</code> aceptaba un identificador numérico sin comprobar explícitamente en la base de datos si el <code>organization_id</code> del registro correspondía al claim verificado en el token JWT del usuario emisor.
+                Colaboradores remotos requerían conectarse a servidores de bases de datos y recursos internos de la empresa desde redes domésticas no autenticadas, existiendo alto riesgo de interceptación de tráfico y exposición de credenciales ante vectores de phishing.
               </p>
             </div>
 
             <div class="case-col">
-              <h4 class="case-subtitle">[02. ANÁLISIS DE IMPACTO]</h4>
+              <h4 class="case-subtitle">[02. ANÁLISIS DE RIESGO]</h4>
               <p class="case-text">
-                Riesgo de acceso indebido horizontal y modificación no autorizada de registros entre distintos clientes empresariales. Clasificación CVSS: 7.5 (Alta severidad en confidencialidad e integridad de datos).
+                Riesgo de fuga de información corporativa y propagación de malware por enlaces no seguros o software desactualizado en puestos de trabajo remotos. Se determinó priorizar el cifrado de extremo a punto y la concientización del usuario.
               </p>
             </div>
 
             <div class="case-col">
-              <h4 class="case-subtitle">[03. REMEDIACIÓN APLICADA]</h4>
+              <h4 class="case-subtitle">[03. REMEDIACIÓN & DESPLIEGUE]</h4>
               <p class="case-text">
-                Refactorización del middleware de datos en el backend para forzar un scope contextual inmutable: cualquier consulta o actualización incluye automáticamente la cláusula <code>WHERE id = :id AND organization_id = :auth_org_id</code> a nivel de capa de repositorio.
+                Implementación y configuración de un túnel VPN corporativo con cifrado punto a punto para todo el personal remoto. Instalación, actualización y monitoreo continuo de antivirus corporativo en todos los equipos de la compañía.
               </p>
             </div>
 
             <div class="case-col">
-              <h4 class="case-subtitle">[04. PRUEBAS Y CIERRE]</h4>
+              <h4 class="case-subtitle">[04. FORMACIÓN & RESULTADOS]</h4>
               <p class="case-text">
-                Incorporación de 14 pruebas automáticas de integración que validan intentos de acceso cruzado entre tenants (esperando <code>404 Not Found</code> o <code>403 Forbidden</code>). Publicación del ADR correspondiente para el equipo de desarrollo.
+                Diseño y facilitación de un curso de concientización en ciberseguridad para el personal administrativo y operativo sobre detección de correos maliciosos. Resultado: conexiones 100% cifradas y cero incidentes de intrusión reportados.
               </p>
             </div>
           </div>
@@ -631,7 +765,7 @@
       <div class="container">
 
         <header class="section-header">
-          <span class="section-tag">// 04. REPERTORIO_TECNICO</span>
+          <span class="section-tag">// 05. REPERTORIO_TECNICO</span>
           <h2 id="skills-title" class="section-title">Habilidades & Tecnologías</h2>
           <p class="section-desc">
             Competencias técnicas y operativas organizadas por área funcional. Sin barras de porcentaje subjetivas; solo tecnologías y prácticas con las que construyo soluciones.
@@ -640,47 +774,47 @@
 
         <div class="skills-grid">
           
-          <!-- Bloque 1: Backend -->
+          <!-- Bloque 1: Backend & Datos -->
           <div class="card skill-category-card">
             <div class="skill-category-header">
               <div class="skill-icon-box">⚙️</div>
               <div>
-                <h3 class="skill-category-name">Desarrollo Backend</h3>
-                <span class="skill-category-sub">Arquitectura de servicios & datos</span>
+                <h3 class="skill-category-name">Desarrollo Backend & Bases de Datos</h3>
+                <span class="skill-category-sub">Arquitectura de servicios, APIs y persistencia</span>
               </div>
             </div>
             <div class="skills-pill-container">
-              <span class="skill-badge">Python (FastAPI / Flask)</span>
-              <span class="skill-badge">Node.js / Express</span>
-              <span class="skill-badge">Go (Fundamentos & APIs)</span>
-              <span class="skill-badge">RESTful APIs Architecture</span>
-              <span class="skill-badge">PostgreSQL & SQL</span>
-              <span class="skill-badge">Redis (Caché / Queues)</span>
-              <span class="skill-badge">Modelado Relacional</span>
-              <span class="skill-badge">Validación de Esquemas (Zod/Pydantic)</span>
-              <span class="skill-badge">Microservicios & Modular Monolith</span>
+              <span class="skill-badge">Java (OOP & Colecciones)</span>
+              <span class="skill-badge">Spring Boot Framework</span>
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">MySQL Relacional</span>
+              <span class="skill-badge">Spring Data JPA / Hibernate</span>
+              <span class="skill-badge">Arquitectura RESTful APIs</span>
+              <span class="skill-badge">Consultas SQL Avanzadas (HackerRank Cert)</span>
+              <span class="skill-badge">Inyección de Dependencias</span>
+              <span class="skill-badge">Validación de DTOs & Controladores</span>
             </div>
           </div>
 
-          <!-- Bloque 2: Seguridad -->
+          <!-- Bloque 2: Ciberseguridad Defensiva -->
           <div class="card skill-category-card">
             <div class="skill-category-header">
               <div class="skill-icon-box">🛡️</div>
               <div>
-                <h3 class="skill-category-name">Seguridad Defensiva</h3>
-                <span class="skill-category-sub">Protección y mitigación técnica</span>
+                <h3 class="skill-category-name">Ciberseguridad & Protección Defensiva</h3>
+                <span class="skill-category-sub">Seguridad de endpoints, VPN y mitigación</span>
               </div>
             </div>
             <div class="skills-pill-container">
-              <span class="skill-badge">OWASP Top 10 Mitigation</span>
-              <span class="skill-badge">Modelado de Amenazas (STRIDE)</span>
-              <span class="skill-badge">Autenticación JWT & OAuth2</span>
-              <span class="skill-badge">Control de Acceso RBAC / ABAC</span>
-              <span class="skill-badge">Criptografía Aplicada (Hashing/Salting)</span>
-              <span class="skill-badge">Sanitización & Prevención de Inyección</span>
-              <span class="skill-badge">Auditoría de Logs de Seguridad</span>
-              <span class="skill-badge">Hardening Básico de Servidores</span>
-              <span class="skill-badge">Análisis de Vulnerabilidades (SAST)</span>
+              <span class="skill-badge">Despliegue de VPNs Corporativas</span>
+              <span class="skill-badge">Gestión de Antivirus Corporativo</span>
+              <span class="skill-badge">Concientización Phishing & Malware</span>
+              <span class="skill-badge">Hacking Ético Defensivo (Talento Tech)</span>
+              <span class="skill-badge">Cisco Cybersecurity Essentials</span>
+              <span class="skill-badge">Análisis de Tráfico de Red (Wireshark)</span>
+              <span class="skill-badge">Hardening de Endpoints</span>
+              <span class="skill-badge">Mitigación de Incidentes TIC</span>
+              <span class="skill-badge">Principios OWASP Top 10</span>
             </div>
           </div>
 
@@ -689,40 +823,38 @@
             <div class="skill-category-header">
               <div class="skill-icon-box">⚡</div>
               <div>
-                <h3 class="skill-category-name">Automatización & DevOps</h3>
-                <span class="skill-category-sub">Procesos repetibles y verificación</span>
+                <h3 class="skill-category-name">Automatización & Flujos de Trabajo</h3>
+                <span class="skill-category-sub">Procesos repetibles y optimización de tareas</span>
               </div>
             </div>
             <div class="skills-pill-container">
-              <span class="skill-badge">Bash Scripting</span>
-              <span class="skill-badge">GitHub Actions CI/CD</span>
-              <span class="skill-badge">Docker & Contenerización</span>
-              <span class="skill-badge">Docker Compose</span>
-              <span class="skill-badge">Escaneo de Secretos (Gitleaks)</span>
-              <span class="skill-badge">Escaneo de Imágenes (Trivy)</span>
-              <span class="skill-badge">Automatización de Backups</span>
-              <span class="skill-badge">Monitoreo de Salud de Servicios</span>
+              <span class="skill-badge">Automatización con n8n</span>
+              <span class="skill-badge">Scripts en Python</span>
+              <span class="skill-badge">Git & GitHub (Control de Versiones)</span>
+              <span class="skill-badge">Automatización de Tareas TIC</span>
+              <span class="skill-badge">Consumo de APIs & Webhooks</span>
+              <span class="skill-badge">Respaldo Automatizado de Datos</span>
+              <span class="skill-badge">Documentación de Flujos</span>
             </div>
           </div>
 
-          <!-- Bloque 4: Herramientas -->
+          <!-- Bloque 4: Infraestructura & Redes -->
           <div class="card skill-category-card">
             <div class="skill-category-header">
               <div class="skill-icon-box">🧰</div>
               <div>
-                <h3 class="skill-category-name">Herramientas & Entorno</h3>
-                <span class="skill-category-sub">Instrumentación diaria de ingeniería</span>
+                <h3 class="skill-category-name">Infraestructura TIC & Redes</h3>
+                <span class="skill-category-sub">Conectividad, hardware y soporte especializado</span>
               </div>
             </div>
             <div class="skills-pill-container">
-              <span class="skill-badge">Git & Control de Versiones</span>
-              <span class="skill-badge">Linux CLI (Debian / Ubuntu / Arch)</span>
-              <span class="skill-badge">Postman & Insomnia</span>
-              <span class="skill-badge">curl / httpie / jq</span>
-              <span class="skill-badge">Nmap (Inspección de red)</span>
-              <span class="skill-badge">Wireshark (Análisis de tráfico)</span>
-              <span class="skill-badge">OpenAPI / Swagger</span>
-              <span class="skill-badge">Markdown / Documentación Técnica</span>
+              <span class="skill-badge">MikroTik RouterOS (Routing Básico)</span>
+              <span class="skill-badge">Cableado Estructurado</span>
+              <span class="skill-badge">Rastreo de Cables (Wire Tracer)</span>
+              <span class="skill-badge">Ponchado de Puntos de Red (RJ45)</span>
+              <span class="skill-badge">Mantenimiento Preventivo & Correctivo</span>
+              <span class="skill-badge">Diagnóstico de Hardware & Periféricos</span>
+              <span class="skill-badge">Soporte Técnico Especializado a Usuarios</span>
             </div>
           </div>
 
@@ -738,10 +870,10 @@
       <div class="container">
 
         <header class="section-header">
-          <span class="section-tag">// 05. ENLACE_DIRECTO</span>
+          <span class="section-tag">// 06. ENLACE_DIRECTO</span>
           <h2 id="contact-title" class="section-title">Contacto & Colaboración</h2>
           <p class="section-desc">
-            ¿Tienes un proyecto backend, requieres una revisión de arquitectura o deseas integrar controles de seguridad? Escríbeme directamente.
+            ¿Tienes una vacante de Backend Developer Junior, un requerimiento de soporte TIC o deseas incorporar soluciones seguras? Conversemos directamente.
           </p>
         </header>
 
@@ -749,7 +881,7 @@
           
           <!-- Formulario de Contacto Neobrutalista -->
           <div class="card contact-form-card">
-            <h3 class="form-title">Enviar mensaje técnico</h3>
+            <h3 class="form-title">Enviar mensaje directo</h3>
             <p class="form-desc">Todos los campos son validados para asegurar una comunicación clara y directa.</p>
 
             <form id="contact-form" novalidate>
@@ -801,9 +933,10 @@
                 </label>
                 <select id="motivo" name="motivo" class="form-select" required aria-describedby="motivo-error">
                   <option value="" disabled selected>Selecciona el área de interés...</option>
-                  <option value="backend">Desarrollo / Arquitectura Backend</option>
-                  <option value="seguridad">Auditoría / Revisión de Seguridad</option>
-                  <option value="automatizacion">Automatización de Procesos / CI-CD</option>
+                  <option value="backend">Desarrollo Backend (Java / Spring Boot / Python)</option>
+                  <option value="bases_datos">Bases de Datos & SQL (MySQL / Modelado)</option>
+                  <option value="seguridad">Soporte TIC & Ciberseguridad (VPN / Redes)</option>
+                  <option value="automatizacion">Automatización de Flujos (n8n / Scripts)</option>
                   <option value="empleo">Propuesta u Oportunidad Laboral</option>
                   <option value="otro">Otra consulta técnica</option>
                 </select>
@@ -813,7 +946,7 @@
               <!-- Mensaje -->
               <div class="form-group">
                 <label for="mensaje" class="form-label">
-                  <span>Detalle del proyecto o mensaje</span>
+                  <span>Detalle del proyecto o vacante</span>
                   <span class="required-indicator" aria-hidden="true">*</span>
                 </label>
                 <textarea 
@@ -821,7 +954,7 @@
                   name="mensaje" 
                   class="form-textarea" 
                   rows="4" 
-                  placeholder="Describe brevemente el alcance, tecnologías involucradas o los requerimientos técnicos..." 
+                  placeholder="Describe los requerimientos técnicos, tecnologías requeridas o detalles del contacto..." 
                   required
                   minlength="10"
                   aria-describedby="mensaje-error"
@@ -847,43 +980,52 @@
             <div class="card contact-details-card">
               <h3 class="card-title-md">Canales de Enlace Directo</h3>
               <p class="contact-subtext">
-                Respuestas en un plazo técnico habitual inferior a 24 horas laborables.
+                Respuestas inmediatas o en un plazo habitual inferior a 24 horas.
               </p>
 
               <ul class="direct-links-list">
-                <!-- REEMPLAZA CON TU CORREO REAL -->
+                <!-- CORREO ELECTRÓNICO REAL -->
                 <li class="direct-link-item">
                   <div class="direct-link-icon" aria-hidden="true">✉️</div>
                   <div class="direct-link-content">
                     <span class="direct-link-label">CORREO ELECTRÓNICO:</span>
-                    <a href="mailto:sergio.florez@ejemplo.com" class="direct-link-anchor">sergio.florez@ejemplo.com</a>
+                    <a href="mailto:sergioflorez422@gmail.com" class="direct-link-anchor">sergioflorez422@gmail.com</a>
                   </div>
                 </li>
 
-                <!-- REEMPLAZA CON TU ENLACE REAL DE LINKEDIN -->
+                <!-- TELÉFONO & WHATSAPP REAL -->
+                <li class="direct-link-item">
+                  <div class="direct-link-icon" aria-hidden="true">📱</div>
+                  <div class="direct-link-content">
+                    <span class="direct-link-label">TELÉFONO / WHATSAPP:</span>
+                    <a href="https://wa.me/573142738437" target="_blank" rel="noopener noreferrer" class="direct-link-anchor">+57 314 273 8437</a>
+                  </div>
+                </li>
+
+                <!-- PERFIL OFICIAL DE LINKEDIN -->
                 <li class="direct-link-item">
                   <div class="direct-link-icon" aria-hidden="true">💼</div>
                   <div class="direct-link-content">
                     <span class="direct-link-label">LINKEDIN:</span>
-                    <a href="https://linkedin.com/in/sergioflorez" target="_blank" rel="noopener noreferrer" class="direct-link-anchor">linkedin.com/in/sergioflorez</a>
+                    <a href="https://www.linkedin.com/in/sergio-florez-129401329/" target="_blank" rel="noopener noreferrer" class="direct-link-anchor">linkedin.com/in/sergio-florez-129401329</a>
                   </div>
                 </li>
 
-                <!-- REEMPLAZA CON TU ENLACE REAL DE GITHUB -->
+                <!-- PERFIL DE GITHUB -->
                 <li class="direct-link-item">
                   <div class="direct-link-icon" aria-hidden="true">🐙</div>
                   <div class="direct-link-content">
                     <span class="direct-link-label">GITHUB:</span>
-                    <a href="https://github.com/sergioflorez" target="_blank" rel="noopener noreferrer" class="direct-link-anchor">github.com/sergioflorez</a>
+                    <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="direct-link-anchor">github.com/sergio</a>
                   </div>
                 </li>
 
-                <!-- REEMPLAZA CON TU UBICACIÓN O ZONA HORARIA -->
+                <!-- UBICACIÓN REAL -->
                 <li class="direct-link-item">
                   <div class="direct-link-icon" aria-hidden="true">📍</div>
                   <div class="direct-link-content">
-                    <span class="direct-link-label">ZONA HORARIA:</span>
-                    <span class="direct-link-text">Colombia (UTC-5) // Remoto / Híbrido</span>
+                    <span class="direct-link-label">UBICACIÓN & DISPONIBILIDAD:</span>
+                    <span class="direct-link-text">Bucaramanga, Santander, Colombia (UTC-5) // Remoto o Híbrido</span>
                   </div>
                 </li>
               </ul>
@@ -891,9 +1033,9 @@
 
             <!-- Manifiesto Profesional / Cierre -->
             <div class="card manifesto-card">
-              <div class="manifesto-badge">DECLARACIÓN DE INGENIERÍA</div>
+              <div class="manifesto-badge">DECLARACIÓN PROFESIONAL</div>
               <blockquote class="manifesto-quote">
-                “La seguridad no es un parche decorativo ni un truco de última hora. Es la disciplina continua de construir software que tolera fallos, resiste adversidades y rinde cuentas con evidencia.”
+                “La solidez de un sistema backend y la seguridad de una red corporativa nacen de la disciplina: código limpio, arquitectura planificada y vigilancia proactiva de cada conexión.”
               </blockquote>
               <div class="manifesto-author">— Sergio Daniel Florez Lopez</div>
             </div>
@@ -915,11 +1057,16 @@
       <div class="footer-left">
         <span class="footer-logo">[SDFL] SERGIO DANIEL FLOREZ LOPEZ</span>
         <p class="footer-copy">
-          Diseñado con estética Neobrutalista técnica. Construido con <strong>HTML5 semántico, CSS3 y JavaScript vanilla</strong>.
+          Tecnólogo en Sistemas (UTS) // Backend Developer Junior & Soporte TIC. Construido con <strong>HTML5 semántico, CSS3 y JavaScript vanilla</strong>.
         </p>
       </div>
 
       <div class="footer-right">
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/sergio-florez-129401329/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn ↗</a>
+          <a href="https://github.com/sergio" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub ↗</a>
+          <a href="mailto:sergioflorez422@gmail.com" class="footer-link">Correo ↗</a>
+        </div>
         <a href="#inicio" class="btn btn--footer-top" id="back-to-top">
           <span>Volver arriba ↑</span>
         </a>
