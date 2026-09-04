@@ -12,56 +12,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-
   /* ==========================================================================
-     01. GESTIÓN DEL TEMA (LIGHT / DARK)
-     ========================================================================== */
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const rootElement = document.documentElement;
-
-  // Comprobar preferencia guardada o preferencia del sistema
-  const getPreferredTheme = () => {
-    const storedTheme = localStorage.getItem('sdf_portfolio_theme');
-    if (storedTheme) {
-      return storedTheme;
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  };
-
-  // Aplicar tema al DOM
-  const setTheme = (theme) => {
-    rootElement.setAttribute('data-theme', theme);
-    localStorage.setItem('sdf_portfolio_theme', theme);
-    
-    if (themeToggleBtn) {
-      const isDark = theme === 'dark';
-      themeToggleBtn.setAttribute('aria-label', isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
-      themeToggleBtn.setAttribute('title', isDark ? 'Activar modo claro' : 'Activar modo oscuro');
-    }
-  };
-
-  // Inicializar tema
-  setTheme(getPreferredTheme());
-
-  // Evento click para alternar
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = rootElement.getAttribute('data-theme') || 'light';
-      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
-      setTheme(nextTheme);
-    });
-  }
-
-  // Sincronizar si cambia la preferencia del sistema operativo
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('sdf_portfolio_theme')) {
-      setTheme(e.matches ? 'dark' : 'light');
-    }
-  });
-
-
-  /* ==========================================================================
-     02. MENÚ MÓVIL ACCESIBLE
+     01. MENÚ MÓVIL ACCESIBLE
      ========================================================================== */
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNavDrawer = document.getElementById('mobile-nav');

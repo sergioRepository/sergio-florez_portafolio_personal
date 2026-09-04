@@ -200,6 +200,7 @@ code, pre {
   border-bottom: var(--border-thick);
 }
 
+
 @media (min-width: 768px) {
   .section {
     padding-top: 5rem;
@@ -379,7 +380,7 @@ code, pre {
    04. BARRA DE NAVEGACIÓN Y MENÚ MÓVIL
    -------------------------------------------------------------------------- */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   background-color: var(--bg);
@@ -2055,8 +2056,7 @@ code, pre {
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 2rem;
+    grid-template-columns: 1fr ;
   }
 }
 
