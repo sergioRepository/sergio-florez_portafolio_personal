@@ -431,29 +431,7 @@ code, pre {
   white-space: nowrap;
 }
 
-.system-status {
-  display: none;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  font-weight: 600;
-  background-color: var(--surface);
-  padding: 0.25rem 0.6rem;
-  border: var(--border-thin);
-  box-shadow: 2px 2px 0px var(--border);
-  white-space: nowrap;
-}
 
-.status-indicator {
-  width: 8px;
-  height: 8px;
-  background-color: var(--accent-green);
-  border: 1.5px solid var(--border);
-  border-radius: 50%;
-  display: inline-block;
-  flex-shrink: 0;
-}
 
 .main-nav {
   display: none;
@@ -514,31 +492,6 @@ code, pre {
   gap: 0.5rem;
   flex-shrink: 0;
 }
-
-/* Interruptor de Tema */
-.btn-theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  background-color: var(--surface);
-  border: var(--border-med);
-  box-shadow: var(--shadow-sm);
-  font-size: 1.1rem;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  flex-shrink: 0;
-}
-
-.btn-theme-toggle:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--border);
-}
-
-[data-theme="light"] .theme-icon-moon { display: none; }
-[data-theme="light"] .theme-icon-sun { display: inline; }
-[data-theme="dark"] .theme-icon-sun { display: none; }
-[data-theme="dark"] .theme-icon-moon { display: inline; }
 
 /* Botón Hamburguesa Móvil */
 .mobile-menu-btn {
