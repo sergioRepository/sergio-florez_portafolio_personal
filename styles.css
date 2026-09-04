@@ -951,59 +951,12 @@ code, pre {
   word-break: break-word;
 }
 
-.pillars-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-}
 
 @media (min-width: 580px) {
-  .pillars-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+
 }
 
-.pillar-card {
-  border: var(--border-med);
-  box-shadow: var(--shadow-sm);
-  padding: 1.25rem;
-}
 
-.pillar-card:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px var(--border);
-}
-
-.pillar-header {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin-bottom: 0.65rem;
-}
-
-.pillar-badge {
-  font-family: var(--font-mono);
-  font-weight: 700;
-  background-color: var(--accent-yellow);
-  color: #111111;
-  padding: 0.15rem 0.45rem;
-  border: var(--border-thin);
-  font-size: 0.8rem;
-  flex-shrink: 0;
-}
-
-.pillar-title {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 700;
-  line-height: 1.25;
-}
-
-.pillar-desc {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
 
 /* --------------------------------------------------------------------------
    06b. SECCIÓN EXPERIENCIA & FORMACIÓN ACADÉMICA
