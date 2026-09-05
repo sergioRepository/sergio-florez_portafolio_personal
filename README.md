@@ -2,9 +2,8 @@
 <div align="center">
 
 # 🌐 ¡Visita mi Portafolio Web Profesional!
-
 [![Portafolio](https://img.shields.io/badge/PORTAFOLIO_WEB-ACCEDER_AQUÍ-007ACC?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sergiorepository.github.io/sergio-florez_portafolio_personal/)
-[![GitHub](https://img.shields.io/badge/GitHub-sergiorepository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sergiorepository)
+
 
 ---
 
